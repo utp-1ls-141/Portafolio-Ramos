@@ -1,0 +1,52 @@
+<!--palabras isomofircas-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>palabras isomorficas</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Palabras isomorficas </h1>
+    
+    <div class="col-md-8 offset-md-2">
+     <div class= "card"  style="margin-top: 10px; width: 300px; height: 300px;">
+     <div>
+     Ingrese la palabra 1:<br>
+      <input class="form-control" type="text" name="palabra1"  id="pal1" pattern="[A-Za-z]+" title="Solo letras">
+     Ingrese la palabra 2:<br>
+     <input class="form-control" type="text" name="palabra2"  id="pal2" pattern="[A-Za-z]+" title="Solo letras">
+     <br>
+     <button class="btn btn-success btn-right " type="submit" onclick="marvel()"> Acptar </button>
+     
+     </div>
+     <div class="modal" id="deadpool" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Palabras isomorficas</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+                 </div>
+                 <div class="modal-body">
+                  <p id="thanos"></p>
+                 </div>
+                 <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">aceptar</button>
+                 </div>
+               </div>
+             </div>
+           </div>
+          </div>  
+        </div>  
+    </div> 
+     <script src="./jquery/jquery-3.3.1.min.js"></script>
+     <script src="isomorficas.js"></script>
+     <script src="./js/bootstrap.min.js"></script> 
+</body>
+
+</html>

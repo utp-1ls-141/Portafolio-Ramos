@@ -1,0 +1,42 @@
+/* Por las brillantes Mentes de 
+Ramon Castro
+Manuel Fernandez
+Pedro Ramos */
+/* Estilo para las tablas y  */
+body{
+  background-color: #EDDDD4;
+}
+.navbar-default{
+  background-color: #197278;
+}
+#myCarousel{
+  background-color:#C4766D;
+  height: 450px; 
+  border-radius: 20px;
+}
+h1{
+  margin-top: 20px;
+}
+.midivsito{
+  border:3px solid #772E25;
+  padding: 2%;
+  background-color:#EDDDD4;
+  height:300px !important;
+  border-radius: 25px;
+}
+.col-md-10{
+  margin-top: 3%;
+  border-right: 3px solid transparent;
+  border-left: 3px solid transparent;
+}
+table,td{
+    border:1px solid black;
+    padding:20px;
+ }
+ .modal-dialog{
+  overflow-x: initial !important
+}
+.modal-body{
+  overflow-x: auto;
+  margin: 50px;
+}

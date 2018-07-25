@@ -1,0 +1,55 @@
+.col-md-10{
+    margin-top: 3%;
+    border-right: 3px solid #6e91c9;
+    border-left: 3px solid#6e91c9;
+
+}
+.form-group{
+    margin-top: 5%;
+    margin-left: -1px;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+
+}
+p{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+#nota{
+    font-weight: bold;
+    color:#6e91c9;
+}
+.col-md-8{
+    border:3px solid #6e91c9;
+    padding: 2%;
+    background-color:#eaecef;
+}
+
+
+
+html,
+body,
+.wrapper {
+  height: 92.5%;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.footer {
+    background-color: gray;
+  /* position: absolute; */
+  /* bottom: 0; */
+  width: 100%;
+  /* height: 42px; You can also remove this as height can now be dynamic */
+
+}
+a{color:white;}

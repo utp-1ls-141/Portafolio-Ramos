@@ -1,0 +1,68 @@
+extends _template
+
+block replace
+    .container
+      .card
+        .card-header
+          | Fecha: 
+          strong #{moment().format('DD/MM/YYYY')}
+        .card-body
+          .row.mb-4
+            .col-sm-6
+              h6.mb-3 De:
+              div
+                strong Los Ganchos
+              br 
+              | Avenida Manuel Espinoza Batista, Plaza El Cangrejo , Panamá. 
+              br
+              | Local #70, Primer piso, al lado de Nación Sushi.
+            .col-sm-6
+              h6.mb-3 Para:
+              div
+                strong #{usuario.nombre.first} #{usuario.nombre.last}
+              br 
+              | #{usuario.direccion}
+          .table-responsive-sm
+            table.table.table-striped
+              thead
+                tr
+                  th.center #
+                  th Item
+                  th.right Costo Unitario
+                  th.center Cantidad
+                  th.right Total
+              tbody
+                - let n = 1;
+                - let acum = 0;
+                - let tax = 0;
+                each item in factura
+                  - let total = parseFloat(item.price) * parseInt(item.quantity);
+                    tr
+                        td.center #{n}
+                        td.left.strong #{item.name}
+                        td.right #{item.price}
+                        td.center #{item.quantity}
+                        td.right #{total}
+                        - acum += parseFloat(total);
+                        - tax += parseFloat(item.tax * item.quantity);
+                        - n++;
+          .row
+            .col-lg-4.col-sm-5
+            .col-lg-4.col-sm-5.ml-auto
+              table.table.table-clear
+                tbody
+                  tr
+                    td.left
+                        strong Subtotal
+                    td.right $#{acum.toFixed(2)}
+                  tr
+                    td.left
+                        strong ITMBS (7%)
+                    td.right $#{tax.toFixed(2)}
+                  tr
+                    td.left
+                        strong Total
+                    td.right
+                        strong $#{(acum + tax).toFixed(2)}
+        form(action='factura/verificar' method='POST')
+            input(type="submit", value="Pagar con PayPal").btn.btn-secondary.float-right

@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Proyecto de Recuperación</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <script src="bootstrap.js"></script> 
+    </head>
+
+    <body>
+        <script >
+             function show_alert(){
+                 alert("Inicio de sesión satisfactorio \n"+ "\nEmail: "+ email.value + " " + "\nClave: "+password.value);
+             }
+        </script>
+
+        <nav class="navbar navbar-dark bg-dark"  id="menu_superior">
+            <a class="navbar-brand" href="#">Grupo #5</a>
+        </nav>
+
+        <center><p id="titulo" class="h1">Proyecto de Recuperación</p></center>
+
+        <div class="container" id="cuerpo">
+            <div class="row">
+                <div class="col-2">
+
+                </div>
+                <div class="col-8">
+                    <div class="alert alert-success" id="myalert" style="display: none;" role="alert">
+                        Inicio de sesión satisfactorio
+                    </div>
+                    <form method="POST" id="inicio" onsubmit="show_alert();">
+                        <fieldset>
+                            <p class="h4">Problema 1</p>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Correo del Usuario</label>
+                            <input required type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Introduzca su correo">
+                            <small id="emailHelp" class="form-text text-muted">No comparta su correo con nadie.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input required type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <button type="submit" id="btn-login" class="btn btn-success" >Iniciar</button>
+                        </fieldset>
+
+
+                    </form>
+                </div>
+                <div class="col-2">
+
+                </div>
+           </div>
+        </div>
+    </body>
+</html> 
